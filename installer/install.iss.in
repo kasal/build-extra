@@ -1305,7 +1305,7 @@ begin
     }
 
     Cmd:=AppDir+'\usr\bin\dash.exe';
-    if not Exec(Cmd, '-c ./rebaseall -p', AppDir+'\usr\bin', SW_HIDE, ewWaitUntilTerminated, i) then begin
+    if not Exec(Cmd, '-c "/usr/bin/rebaseall -p"', AppDir, SW_HIDE, ewWaitUntilTerminated, i) then begin
       Msg:='Line {#__LINE__}: Unable to rebase DLLs.';
 
       // This is not a critical error, so just notify the user and continue.

@@ -75,7 +75,7 @@ echo "Creating archive" &&
  echo 'OverwriteMode="0"' &&
  if test 32 = "$BITNESS"
  then
-	echo 'RunProgram="usr\bin\dash.exe -c 'usr/bin/rebaseall -p'"'
+	echo 'RunProgram="autorebase.bat"'
  fi &&
  echo 'RunProgram="usr\bin\bash.exe --login -c exit"' &&
  echo ';!@InstallEnd@!' &&
