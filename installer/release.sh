@@ -76,9 +76,10 @@ x86_64)
 esac
 
 echo "Generating file list to be included in the installer ..."
-LIST="$(ARCH=$ARCH BITNESS=$BITNESS PACKAGE_VERSIONS_FILE=package-versions.txt \
-	sh "$SCRIPTDIR"/../make-file-list.sh)" ||
-die "Could not generate file list"
+LIST=git-bash.exe
+#LIST="$(ARCH=$ARCH BITNESS=$BITNESS PACKAGE_VERSIONS_FILE=package-versions.txt \
+#	sh "$SCRIPTDIR"/../make-file-list.sh)" ||
+#die "Could not generate file list"
 
 printf "; List of files\n%s\n%s\n" \
 	"Source: \"$SCRIPTDIR\\package-versions.txt\"; DestDir: {app}\\etc; Flags: replacesameversion; AfterInstall: DeleteFromVirtualStore" \
